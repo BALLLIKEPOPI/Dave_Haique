@@ -138,7 +138,7 @@
 
     <xacro:macro name="thruster_macro1"
    	           params="thruster_id 
-                        *joint_origin
+                        *origin
                         *axis
                         parent_link">
         <xacro:thruster_module_first_order_basic_fcn_macro
@@ -148,14 +148,14 @@
             mesh_filename="${qianshang_mesh_file}"
             dyn_time_constant="0.05"
             rotor_constant="0.00031">  <!-- This is a guess for now (same as Smilidon) -->
-        <xacro:insert_block name="joint_origin"/>
+        <xacro:insert_block name="origin"/>
         <xacro:insert_block name="axis"/>
         </xacro:thruster_module_first_order_basic_fcn_macro>
     </xacro:macro>
 
     <xacro:macro name="thruster_macro2"
    	           params="thruster_id 
-                        *joint_origin
+                        *origin
                         *axis
                         parent_link">
         <xacro:thruster_module_first_order_basic_fcn_macro
@@ -165,72 +165,72 @@
             mesh_filename="${qianxia_mesh_file}"
             dyn_time_constant="0.05"
             rotor_constant="0.00031">  <!-- This is a guess for now (same as Smilidon) -->
-        <xacro:insert_block name="joint_origin"/>
+        <xacro:insert_block name="origin"/>
         <xacro:insert_block name="axis"/>
         </xacro:thruster_module_first_order_basic_fcn_macro>
     </xacro:macro>
 
     <!-- qianshang -->
     <xacro:thruster_macro1 thruster_id="0" parent_link="haique_link">
-        <joint_origin
-            xyz="-0.00013907 0.3405 0.04191"
+        <origin
+            xyz="-0.00013907 0.3405 0.04691"
             rpy="3.1383 0 1.5616" />
         <axis
             xyz="0 0 1" />
     </xacro:thruster_macro1>
     <!-- zuoshang -->
     <xacro:thruster_macro2 thruster_id="1" parent_link="zuo_link">
-        <joint_origin
-            xyz="0 -0.04109 0.2285"
-            rpy="1.5708 -1.3538 3.1416" />
+        <origin
+            xyz="0.006 -0.2285 -0.037 "
+            rpy="0 -0.21 0" />
         <axis
             xyz="0 0 -1" />
     </xacro:thruster_macro2>
     <!-- houshang -->
     <xacro:thruster_macro1 thruster_id="2" parent_link="haique_link">
-        <joint_origin
-            xyz="0 -0.3005 0.04191"
+        <origin
+            xyz="0 -0.3005 0.04691"
             rpy="3.1416 0 1.5735" />
         <axis
             xyz="0 0 -1" />
     </xacro:thruster_macro1>
     <!-- youshang -->
     <xacro:thruster_macro2 thruster_id="3" parent_link="you_link">
-        <joint_origin
-            xyz="-0.2285 0.03787 0"
-            rpy="-1.5708 0.1979 3.1416" />
+        <origin
+            xyz="0.02087 -0.2285 -0.03"
+            rpy="0 -0.45 0" />
         <axis
             xyz="0 0 1" />
     </xacro:thruster_macro2>
     <!-- qianxia -->
     <xacro:thruster_macro2 thruster_id="4" parent_link="haique_link">
-        <joint_origin
-            xyz="0 0.3405 -0.0419"
+        <origin
+            xyz="0 0.3405 -0.0369"
             rpy="0.00327 0 -1.3999" />
         <axis
             xyz="0 0 -1" />
     </xacro:thruster_macro2>
     <!-- zuoxia -->
     <xacro:thruster_macro1 thruster_id="5" parent_link="zuo_link">
-        <joint_origin
-            xyz="0 0.04108 0.2285"
-            rpy="1.5708 1.548 0" />
+        <origin
+            xyz="-0.005 -0.2285 0.04648 "
+            rpy="0 -0.217 0" />
         <axis
             xyz="0 0 1" />
     </xacro:thruster_macro1>
     <!-- houxia -->
     <xacro:thruster_macro2 thruster_id="6" parent_link="haique_link">
-        <joint_origin
-            xyz="0 -0.3005 -0.0419"
+        <origin
+            xyz="0 -0.3005 -0.0369"
             rpy="0 0 0.47674" />
         <axis
             xyz="0 0 1" />
     </xacro:thruster_macro2>
     <!-- youxia -->
     <xacro:thruster_macro1 thruster_id="7" parent_link="you_link">
-        <joint_origin
-            xyz="-0.2285 -0.0379 0"
-            rpy="1.5708 -0.121 3.1416" />
+        <origin
+            xyz="-0.02387 -0.2285 0.04"
+            rpy="0 -0.45 0" />
         <axis
             xyz="0 0 -1" />
     </xacro:thruster_macro1>
