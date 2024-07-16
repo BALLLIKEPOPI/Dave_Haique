@@ -2,8 +2,8 @@
 <launch>
     <arg name="namespace" default="haique"/>
     <arg name="debug" default="false"/>
-        <param name="/$(arg namespace)/haique" 
-               command="$(find xacro)/xacro '$(find haique_description)/urdf/haique.xacro' 
-                        debug:=$(arg debug) 
-                        namespace:=$(arg namespace)"/>
+    <param name="/$(arg namespace)/haique" 
+            command="$(find xacro)/xacro '$(find haique_description)/urdf/haique.xacro' 
+                    debug:=$(arg debug) 
+                    namespace:=$(arg namespace)"/>
 </launch>
